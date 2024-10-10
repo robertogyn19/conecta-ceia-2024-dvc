@@ -1,0 +1,4 @@
+pillow
+scipy
+tensorflow==2.15.1
+tqdm>=4.41.0,<5

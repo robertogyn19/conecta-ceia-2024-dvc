@@ -1,0 +1,18 @@
+services:
+
+  minio:
+    image: "bitnami/minio:2024.5.10"
+    container_name: minio-local
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - $PWD/minio-data:/data
+    user: "501"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minio123,./}
+      MINIO_SKIP_CLIENT: "yes"
+      MINIO_DATA_DIR: "/data"
+      MINIO_UID: 501
+      MINIO_GID: 20
