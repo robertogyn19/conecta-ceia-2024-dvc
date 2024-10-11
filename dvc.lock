@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data
+      hash: md5
+      md5: 21060888834f7220846d1c6f6c04e649.dir
+      size: 64128504
+      nfiles: 2800
+    - path: train.py
+      hash: md5
+      md5: 87cbb09a6e57c4e044f68a03e519c0c8
+      size: 4118
+    outs:
+    - path: bottleneck_features_train.npy
+      hash: md5
+      md5: a32da194f650fab1b8cb496c9463e7aa
+      size: 65536128
+    - path: bottleneck_features_validation.npy
+      hash: md5
+      md5: 371852b52112ba4bf77bb28ee7a80bd1
+      size: 26214528
+    - path: metrics.csv
+      hash: md5
+      md5: 53be9cdfbdc24c03f6ee2465fd067834
+      size: 839
+    - path: model.weights.h5
+      hash: md5
+      md5: 6eb85485c36912f5aee878d243bb2fed
+      size: 8410504
